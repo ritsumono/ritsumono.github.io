@@ -32,10 +32,10 @@ div.content{
 
 @keyframes land{
 	0%{
-		background-position: 0 230px, 3000% 30px;
+		background-position: 0 230px, 3000% -80px;
 	}
 	100%{
-		background-position: 100% 230px, -200% 30px;
+		background-position: 100% 230px, -200% -80px;
 	}
 }
 
