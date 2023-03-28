@@ -15,6 +15,9 @@ function jump(){
 	}, 500)
 }
 
+window.addEventListener('click', function(){
+	jump()
+})
 
 window.addEventListener('keyup', function(e){
 	if(e.key === " "){
