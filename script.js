@@ -70,7 +70,7 @@ var checkDead = setInterval(() => {
   var blockPosition = 
     parseInt(window.getComputedStyle(block).getPropertyValue("left"))
 
-  if (blockPosition < 40 && blockPosition > 0 && kangarooPoisiton >= -50){
+  if (blockPosition < 20 && blockPosition > 0 && kangarooPoisiton >= -50){
     block.className = ""
 
     window.alert("You Lose")
