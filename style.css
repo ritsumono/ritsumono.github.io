@@ -15,7 +15,7 @@ body{
 div.content{
   position: relative;
   width: 800px;
-  height: 250px;
+  height: 280px;
   border: 1px solid #ccc;
   margin: auto;
   margin-top: 20px;
@@ -32,10 +32,10 @@ div.content{
 
 @keyframes land{
 	0%{
-		background-position: 0 230px, 3000% -230px;
+		background-position: 0 230px, 3000% -200px;
 	}
 	100%{
-		background-position: 100% 230px, -200% -230px;
+		background-position: 100% 230px, -200% -200px;
 	}
 }
 
