@@ -144,13 +144,13 @@ div.content button:active{
 div.content button#reset-btn{
   position: absolute;
   top: 20px;
-  right: 600px;
+  right: 300px;
 }
 
 div.content button#sair-btn{
   position: absolute;
   top: 20px;
-  right: 450px;
+  right: 150px;
 }
 
 div.content div.buttons{
