@@ -15,7 +15,7 @@ body{
 div.content{
   position: relative;
   width: 720px;
-  height: 1250px;
+  height: 1280px;
   border: 1px solid #ccc;
   margin: auto;
   margin-top: 20px;
@@ -143,14 +143,14 @@ div.content button:active{
 
 div.content button#reset-btn{
   position: absolute;
-  top: 40px;
-  right: 400px;
+  top: 20px;
+  right: 600px;
 }
 
 div.content button#sair-btn{
   position: absolute;
-  top: 40px;
-  right: 250px;
+  top: 20px;
+  right: 450px;
 }
 
 div.content div.buttons{
