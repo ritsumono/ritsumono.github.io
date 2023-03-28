@@ -14,7 +14,7 @@ body{
 
 div.content{
   position: relative;
-  width: 300px;
+  width: 0px;
   height: 600px;
   border: 1px solid #ccc;
   margin: auto;
