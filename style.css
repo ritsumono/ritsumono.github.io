@@ -14,7 +14,7 @@ body{
 
 div.content{
   position: relative;
-  width: 800px;
+  width: 720px;
   height: 280px;
   border: 1px solid #ccc;
   margin: auto;
@@ -23,7 +23,7 @@ div.content{
   background-image: url(''), url('assets/background.png');
   background-repeat: repeat;
   background-position: -10 30px, -50 150px;
-  animation: land 10s linear infinite;
+  animation: land 8s linear infinite;
 
   display: flex;
   align-items: flex-end;
