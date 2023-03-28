@@ -112,7 +112,7 @@ img#block.normal{
 }
 
 img#block.rapido{
-  animation: animate .8s linear infinite;
+  animation: animate .9s linear infinite;
 }
 
 @keyframes animate{
