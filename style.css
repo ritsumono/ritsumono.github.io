@@ -2,19 +2,36 @@
 	margin: 0;
 	padding: 0;
 }
+
+:root{
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
 body{
+    --hue: var(--hue-neutral);
 	height: 100vh;
+    width: 100vw;
 	font-size: 1rem;
 	font-family: 'Roboto','Poppins',Arial,sans-serif;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    background-color: hsl(var(--hue),100%, 20%);
 }
 
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
 
 div.content{
-  position: relative;
-  width: 720px;
+    position:relative;
+  width:auto;
   height: 280px;
   border: 1px solid #ccc;
   margin: auto;
@@ -104,7 +121,7 @@ img#block{
 }
 
 img#block.devagar{
-  animation: animate 1.5s linear infinite;
+  animation: animate .9s linear infinite;
 }
 
 img#block.normal{
@@ -112,7 +129,7 @@ img#block.normal{
 }
 
 img#block.rapido{
-  animation: animate .9s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 @keyframes animate{
@@ -144,14 +161,9 @@ div.content button:active{
 div.content button#reset-btn{
   position: absolute;
   top: 20px;
-  right: 250px;
+  right: 100000000px;
 }
 
-div.content button#sair-btn{
-  position: absolute;
-  top: 20px;
-  right: 150px;
-}
 
 div.content div.buttons{
   position: absolute;
@@ -159,3 +171,65 @@ div.content div.buttons{
   right: 225px;
 }
 
+.container {
+    position:absolute;
+    height: auto;
+    width: 800px;
+    max-width: 80%;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10 px; 2px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue),100%, 30%);
+    background-color: hsl(var(--hue),100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn, .play-btn, .restart-btn {
+    font-size: 1.rem;
+    font-weight: bold;
+    padding: 40px, 100px;
+}
+
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
