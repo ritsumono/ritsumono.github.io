@@ -7,6 +7,8 @@ const restartButton=document.getElementById('restart-btn')
 const playButton=document.getElementById('play-btn')
 const content=document.getElementById('content')
 const game=document.getElementById('game-content')
+const p=document.getElementById('p')
+var counter=0
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -935,7 +937,9 @@ function rapido(){
   devagarBtn.style.display = "none"
 
   velocidade = 3
+  counter=0
   block.classList.add("rapido")
+  p.classList.remove('hide')
 }
 
 function normal(){
@@ -944,8 +948,10 @@ function normal(){
   devagarBtn.style.display = "none"
 
   velocidade = 2
+  counter=0
 
   block.classList.add("normal")
+  p.classList.remove('hide')
 }
 
 function devagar(){
@@ -954,8 +960,10 @@ function devagar(){
   devagarBtn.style.display = "none"
 
   velocidade = 1
+  counter=0
 
   block.classList.add("devagar")
+  p.classList.remove('hide')
 }
 
 
@@ -970,8 +978,9 @@ var checkDead = setInterval(() => {
     block.className = ""
       
     window.alert("You Lose")
+    counter=0
+	p.classList.add('hide')
     startButton.classList.remove('hide')
-
     if (content.childNodes.length == 7){
       var btnReset = document.createElement("button")
 
@@ -992,7 +1001,10 @@ var checkDead = setInterval(() => {
 
     }
 
-  }
+  }else{
+        counter++;
+        document.getElementById("scoreSpan").innerHTML=Math.floor(counter/100)
+    }
 }, 10)
 
 function restart(){

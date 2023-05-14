@@ -160,7 +160,7 @@ div.content button:active{
 
 div.content button#reset-btn{
   position: absolute;
-  top: 200000000000000px;
+  top: 20px;
   right: 100000000px;
 }
 
@@ -232,4 +232,10 @@ div.content div.buttons{
 
 .hidden{
     display: none;
+}
+
+p{
+    text-align: center;
+	position: absolute;
+	top: 20px;
 }
