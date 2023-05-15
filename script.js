@@ -45,7 +45,8 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
-    })
+		
+	})
 }
 
 function resetState() {
@@ -71,17 +72,18 @@ function selectAnswer(e) {
     } else {
         startButton.innerText='Restart'
         startButton.classList.remove('hide')
-    }
+	}
 }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
-        restartButton.classList.remove('hide')
+		restartButton.classList.remove('hide')
     } else {
         element.classList.add('wrong')
     }
+	
 }
 
 
@@ -977,10 +979,11 @@ var checkDead = setInterval(() => {
   if (blockPosition < 20 && blockPosition > 0 && kangarooPoisiton >= -50){
     block.className = ""
       
-    window.alert("You Lose")
+    window.alert("You Lose       Score: "+Math.floor(counter/100) )
     counter=0
 	p.classList.add('hide')
     startButton.classList.remove('hide')
+	game.classList.add('hidden')
     if (content.childNodes.length == 7){
       var btnReset = document.createElement("button")
 
@@ -1030,10 +1033,10 @@ restartButton.addEventListener('click', restart)
 function restart() {
     console.log('Restart')
     resetState ()
+    game.classList.remove('hidden')
     rapidoBtn.style.display = "inline"
     normalBtn.style.display = "inline"
     devagarBtn.style.display = "inline"
-    game.classList.remove('hidden')
     restartButton.classList.add('hide')
     questionContainerElement.classList.add('hide')
     nextButton.classList.add('hide')
